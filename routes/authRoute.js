@@ -72,6 +72,8 @@ router.post('/register', [
                 res.json({ token });
             }
         )
+    console.log(user);
+    
     } catch (error){
         console.log(err.message)
         res.status(500).send('Server error');
