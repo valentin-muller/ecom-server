@@ -12,6 +12,9 @@ app.use(express.urlencoded({extended: true}));
 app.use(morgan('dev'))
 app.use(cors())
 
+//routes
+app.use('/api/user', require('./routes/authRoute'))
+
 app.get('/', (req, res) => {
     res.send('text route => home page');
 });
