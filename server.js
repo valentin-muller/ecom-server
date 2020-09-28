@@ -5,7 +5,11 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config({
     path: './config/index.env'
-})
+});
+
+//MongoDB
+const connectDB = require('./config/db');
+connectDB();
 
 // Middlewares
 app.use(express.urlencoded({extended: true}));
